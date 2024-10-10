@@ -1,0 +1,154 @@
+/* Para telas menores, como smartphones */
+@media (max-width: 600px) {
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #fff; /* Cor de fundo */
+        color: #333; /* Cor do texto */
+        overflow-x: hidden;
+    }
+    
+    .header-content {
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+        text-align: left; /* Centraliza o conteúdo */
+    }
+
+    .nav ul {
+        flex-direction:row; /* Exibe os links um abaixo do outro */
+    }
+
+    .nav li {
+        margin-left: 0; /* Remove a margem entre os itens */
+        margin-top: 10px; /* Adiciona margem acima de cada item */
+    }
+
+    .comprar h2,
+    .venda h2,
+    .recursos h2,
+    .depoimentos h2,
+    .contato h2 {
+    color: #222;
+    font-size: 1.5rem; /* Tamanho do título das seções */
+    margin-bottom: 2.5rem; /* Espaço abaixo do título */
+}
+
+    .comment {
+        display: none; /* Use flexbox para o contêiner de comentários */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        padding: 1rem; /* Espaçamento interno */
+        border-radius: 8px; /* Bordas arredondadas */
+        width: 45%; /* Largura dos comentários */
+        position: relative; /* Permite usar z-index */
+        text-align: center; /* Centraliza o texto dos comentários */
+        margin-top: 6rem;
+    }
+
+    .foto-autor {
+        width: 3rem; /* Reduz o tamanho da foto do autor */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Reduz o tamanho da logo */
+    }
+
+    .capa-livro {
+        width: 100%; /* Ajusta a largura da imagem para 100% */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .comment {
+        width: 90%; /* Reduz a largura dos comentários */
+        margin-top: 2rem; /* Reduz a margem superior dos comentários */
+    }
+
+    .btn-comprar {
+        display: none;
+        top: 3rem; /* Ajusta a posição do botão de compra */
+        right: 0.5rem; /* Alinha mais o botão à direita */
+    }
+
+    .about-content {
+        display: block; /* Usando Flexbox para layout */
+        align-items: center; /* Alinha itens verticalmente */
+        text-align: center;
+    }
+    
+    .about-text {
+        flex: 1; /* O texto ocupa o espaço restante */
+        margin-right: 20px; /* Margem à direita do texto */
+    }
+    
+    .about-img {
+        margin: 1rem;
+        width: 300px; /* Largura da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 10px; /* Bordas arredondadas */
+    }
+}
+
+
+
+/* Para tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    .header-content {
+        flex-direction: row; /* Alinha o conteúdo em linha */
+        justify-content: space-around; /* Distribui o conteúdo */
+    }
+
+    .nav ul {
+        flex-direction: row; /* Exibe os links em linha */
+    }
+
+    .foto-autor {
+        width: 3.5rem; /* Ajusta o tamanho da foto do autor */
+    }
+
+    .logo {
+        font-size: 2rem; /* Tamanho ajustado da logo */
+    }
+
+    .capa-livro {
+        width: 80%; /* Ajusta a largura da capa do livro */
+    }
+
+    .comment {
+        width: 70%; /* Ajusta a largura dos comentários */
+    }
+
+    .btn-comprar {
+        top: 4.5rem; /* Ajusta a posição do botão de compra */
+    }
+}
+
+/* Para desktops */
+@media (min-width: 769px) {
+    .header-content {
+        justify-content: space-between; /* Mantém o layout padrão */
+    }
+
+    .nav ul {
+        flex-direction: row; /* Exibe os links em linha */
+    }
+
+    .foto-autor {
+        width: 4rem; /* Mantém o tamanho original */
+    }
+
+    .logo {
+        font-size: 2.5rem; /* Aumenta o tamanho da logo */
+    }
+
+    .capa-livro {
+        width: 40rem; /* Mantém o tamanho original da capa */
+        height: 33rem;
+    }
+
+    .comment {
+        width: 45%; /* Mantém a largura dos comentários */
+    }
+
+    .btn-comprar {
+        top: 6.3rem; /* Mantém a posição do botão */
+    }
+}

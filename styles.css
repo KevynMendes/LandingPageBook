@@ -1,0 +1,539 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+}
+
+.header {
+    background-color: #f5f5f5; /* Cor de fundo */
+    padding: 1rem 0;
+    color: #222; /* Cor do texto */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente todos os itens */
+    justify-content: space-between; /* Espaço entre elementos */
+}
+
+.foto-autor {
+    width: 4rem; /* Tamanho da foto */
+    height: auto;
+    transform: rotate(-10deg); /* Inclina a foto em -15 graus */
+    transition: transform 0.3s; /* Suaviza a transformação ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+.foto-autor:hover {
+    transform: rotate(0); /* Volta a imagem ao normal ao passar o mouse */
+}
+
+.logo {
+    font-size: 2rem; /* Tamanho do texto */
+    white-space: nowrap;
+    margin-left: 1rem; /* Margem à esquerda da logo */
+    margin-right: auto; /* Para empurrar a nav para a direita */
+}
+
+.nav {
+    display: flex; /* Exibe os itens em linha */
+}
+
+.nav ul {
+    display: flex; /* Exibe os links em linha */
+    list-style: none; /* Remove marcadores */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+}
+
+.nav li {
+    margin-left: 20px; /* Espaçamento entre os links */
+}
+
+.nav a {
+    color: #333; /* Cor dos links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding para aumentar a área clicável */
+    transition: color 0.3s; /* Transição para hover */
+}
+
+.nav a:hover {
+    color: #4CAF50; /* Cor do link no hover */
+}
+
+.text-container {
+    text-align: center; /* Centraliza o conteúdo do contêiner */
+    margin-top: 0.625rem;
+    position: relative; /* Permite o uso de posicionamento absoluto dentro */
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6; /* Borda inferior com cor padrão */
+    position: absolute; /* Posiciona a borda em relação ao contêiner pai */
+    width: 100%; /* Define a largura da borda para 100% do contêiner pai */
+    top: 100%; /* Alinha a borda em 55% do contêiner */
+}
+
+.bg-white {
+    background-color: white; /* Fundo branco para o texto */
+    display: inline-block; /* O elemento se comporta como um bloco em linha */
+    padding: 0 0.5rem; /* Padding horizontal */
+    font-family: serif; /* Fonte serifada */
+    letter-spacing: 0.2rem; /* Espaçamento entre letras */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+.text-secondary {
+    color: #6c757d; /* Cor secundária do texto */
+}
+
+.text-uppercase {
+    text-transform: uppercase; /* Converte texto para letras maiúsculas */
+}
+
+.hero {
+    padding: 1rem 0; /* Espaçamento acima e abaixo */
+
+}
+
+.image-comment-container img{
+    position: relative; /* Permite que os comentários sejam posicionados em relação à imagem */
+    display: flex; /* Usando Flexbox */
+    align-items: center; /* Alinha os itens no topo */
+    justify-content: center; /* Centraliza o conteúdo */
+    margin: 0; 
+    margin-top: 1rem;
+
+}
+
+.capa-livro {
+    display: flex; /* Garante que a imagem da capa seja um bloco */
+    width: 40rem; /* Aumenta a largura da imagem para 40rem */
+    height: 33rem; /* Aumenta a altura da imagem para 30rem */
+    object-fit: cover; /* Garante que a imagem mantenha a proporção e cubra o contêiner */
+}
+
+.comment-author-img {
+    display: block; /* Use block para a imagem em vez de flex */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 4rem; /* Largura da imagem do autor */
+    height: 4rem; /* Altura da imagem do autor */
+    border-radius: 50%; /* Imagem redonda */
+    border: 2px solid #ddd; /* Borda ao redor da imagem */
+}
+
+.comment {
+    display: flex; /* Use flexbox para o contêiner de comentários */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 45%; /* Largura dos comentários */
+    position: relative; /* Permite usar z-index */
+    text-align: center; /* Centraliza o texto dos comentários */
+    margin-top: 6rem;
+}
+
+
+.image-comment-container {
+    position: relative; /* Permite que os comentários sejam posicionados em relação à imagem */
+    display: flex; /* Usando Flexbox */
+    align-items: flex-start; /* Alinha os itens no topo */
+    justify-content: center; /* Centraliza o conteúdo */
+    margin: 1rem 0; /* Espaço ao redor da imagem */
+}
+
+
+.comment-left {
+    margin-right: 6rem; /* Espaço entre o comentário e a imagem */
+}
+
+.comment-right {
+    margin-left: 6rem; /* Espaço entre o comentário e a imagem */
+}
+
+.stars {
+    font-size: 1.2rem; /* Tamanho dos ícones de estrela */
+    color: gold; /* Cor das estrelas */
+    margin-bottom: 1rem;
+}
+
+
+.logos {
+    display: flex; /* Usa flexbox para layout horizontal */
+    justify-content:space-evenly; /* Centraliza os itens horizontalmente */
+    align-items:center; /* Centraliza os itens verticalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha, se necessário */
+    margin: 5px auto; /* Margem acima e abaixo da seção */
+}
+
+.logo-item {
+    margin: 0 15px; /* Espaço entre os itens */
+}
+
+.logo-container {
+    display: flex; /* Usar flexbox para alinhar logo e número na mesma linha */
+    align-items: center; /* Centraliza verticalmente logo e número */
+}
+
+.logo {
+    width: 6rem; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 0.625rem; /* Espaço entre o número e a imagem */
+}
+
+.logo-item p {
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
+    margin: 0; /* Remove margem padrão do parágrafo */
+    line-height: 1; /* Ajusta a altura da linha para centralizar melhor o número */
+    font-size: 1.5rem; /* Tamanho da fonte do número */
+    display: flex; /* Garante que o número possa ser alinhado verticalmente */
+    align-items: center; /* Alinha verticalmente o texto dentro do parágrafo */
+}
+
+.btn-comprar {
+    background-color: #f3f3f3; /* Cor verde para o botão */
+    color: #222; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    border: solid 1px #a4acb2 ;
+    border-radius: 5px; /* Bordas arredondadas */
+    position: fixed; /* Fixo na tela */
+    right: 0.1rem; /* Distância do lado direito */
+    top: 6.3rem; /* Distância do fundo */
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
+.btn-comprar:hover {
+    background-color: #cdcdcd; /* Cor do botão ao passar o mouse */
+}
+
+
+.capa-livro {
+    max-width: 300px; /* Tamanho máximo da imagem da capa do livro */
+    margin: 20px 0; /* Margem acima e abaixo da imagem */
+}
+
+.btn {
+    background-color: #4CAF50; /* Verde */
+    border: none; /* Remove bordas do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    color: #fff; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho do texto do botão */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Verde escuro no hover */
+}
+
+.comprar,
+.venda,
+.recursos,
+.depoimentos,
+.contato {
+    padding: 3rem 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+.comprar h2,
+.venda h2,
+.recursos h2,
+.depoimentos h2,
+.contato h2 {
+    color: #222;
+    font-size: 2.5rem; /* Tamanho do título das seções */
+    margin-bottom: 2.5rem; /* Espaço abaixo do título */
+}
+
+.comprar p,
+.venda p,
+.recursos p,
+.depoimentos p,
+.contato p {
+    font-size: 1.1rem; /* Tamanho do título das seções */
+    margin-bottom: 2.5rem; /* Espaço abaixo do título */
+}
+
+.venda ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding da lista */
+}
+
+.venda li {
+    margin: 10px 0; /* Margem entre os itens da lista */
+}
+
+.logo-editora {
+    max-width: 200px; /* Tamanho máximo da logo da editora */
+    margin-top: 20px; /* Margem acima da logo da editora */
+}
+
+.get-your-copy {
+    background-color: #b3dcb5;
+    padding: 3rem;
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem acima e abaixo da seção */
+}
+
+.book-cover {
+    display: block; /* Para garantir que a imagem seja exibida como um bloco */
+    max-width: 20%; /* Para que a imagem se ajuste ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Adiciona margem acima e abaixo e centraliza a imagem */
+}
+
+.get-your-copy h3 {
+    font-size: 1.8rem; /* Tamanho da fonte do título */
+    color: #222; /* Cor do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.get-your-copy p {
+    font-size: 1.2rem; /* Tamanho da fonte do parágrafo */
+    color: #222; /* Cor do texto do parágrafo */
+}
+
+.international-link {
+    color: #333; /* Cor do link */
+    text-decoration: #45a049 underline; /* Sublinhado para destacar o link */
+}
+
+.international-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+.depoimentos {
+    padding: 40px 0; /* Espaçamento vertical */
+    background-color: #f9f9f9; /* Cor de fundo */
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 2em; /* Tamanho da fonte do título */
+}
+
+.comment-container {
+    display: flex; /* Usando Flexbox */
+    flex-wrap: wrap; /* Permite que os comentários se ajustem na linha */
+    justify-content: space-between; /* Espaço entre os comentários */
+}
+
+.comment-item {
+    width: calc(50% - 10px); /* Largura dos comentários com espaço */
+    padding: 15px; /* Espaço interno */
+    margin-bottom: 20px; /* Margem abaixo dos comentários */
+    border: 1px solid #ccc; /* Borda dos comentários */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #fff; /* Cor de fundo dos comentários */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.author-img {
+    width: 50px; /* Largura da imagem do autor */
+    height: 50px; /* Altura da imagem do autor */
+    border-radius: 50%; /* Imagem redonda */
+    margin-top: 10px; /* Margem acima da imagem */
+}
+
+.recursos {
+    padding: 3rem; /* Preenchimento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 40px 0; /* Margem acima e abaixo da seção */
+}
+
+.recursos h2 {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: #222; /* Cor do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.resource-link {
+    color: #333; /* Cor do link */
+    text-decoration: #45a049 underline; /* Sublinhado para destacar o link */
+    transition: color 0.3s ease; /* Efeito de transição suave para a cor */
+}
+
+.resource-link:hover {
+    color: #45a049; /* Cor do link ao passar o mouse */
+}
+
+
+.recursos ul {
+    list-style: none; /* Remove marcadores padrão da lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+    margin: 1rem 0; /* Margem acima e abaixo da lista */
+    text-align: left;}
+
+.recursos li {
+    font-size: 1.2rem; /* Tamanho da fonte dos itens da lista */
+    color: #222; /* Cor do texto dos itens da lista */
+    margin: 2rem 0; /* Espaço entre os itens da lista */
+}
+
+
+.download-section {
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    text-align: center; /* Centraliza o texto */
+    margin: 40px 0; /* Margem acima e abaixo da seção */
+}
+
+.download-section h3 {
+    font-size: 1.8rem; /* Tamanho da fonte do título */
+    color: #333; /* Cor do título */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+.download-section p {
+    font-size: 1.2rem; /* Tamanho da fonte dos parágrafos */
+    color: #555; /* Cor do texto dos parágrafos */
+    margin: 10px 0; /* Espaço entre os parágrafos */
+}
+
+.taco-icon {
+    width: 80px; /* Largura da imagem do ícone */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px 0; /* Espaço acima e abaixo da imagem */
+}
+
+.email-input-container {
+    display: flex; /* Flexbox para alinhar ícone e campo de entrada */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 15px; /* Espaço acima do contêiner */
+}
+
+.email-input {
+    width: 300px; /* Largura do campo de entrada */
+    padding: 10px; /* Preenchimento interno */
+    border: 1px solid #ddd; /* Borda do campo de entrada */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-left: 10px; /* Espaço entre o ícone e o campo de entrada */
+    font-size: 1rem; /* Tamanho da fonte do campo de entrada */
+    outline: none; /* Remove a borda de foco padrão */
+    transition: border-color 0.3s; /* Transição suave para a borda */
+}
+
+.email-input:focus {
+    border-color: #007BFF; /* Cor da borda quando em foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao redor do campo de entrada */
+}
+
+
+.book-teachings {
+    padding: 2rem; /* Preenchimento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 2rem 0; /* Margem acima e abaixo da seção */
+    text-align: center; /* Centraliza o texto */
+}
+
+.book-teachings h3 {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: #222; /* Cor do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+}
+
+.book-teachings h4 {
+    font-size: 1.5rem; /* Tamanho da fonte do subtítulo */
+    color: #444; /* Cor do subtítulo */
+    margin-bottom: 1rem; /* Espaço abaixo do subtítulo */
+}
+
+.book-teachings ul {
+    list-style: none; /* Remove marcadores padrão da lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+    margin: 1rem 0; /* Margem acima e abaixo da lista */
+}
+
+.book-teachings li {
+    font-size: 1.2rem; /* Tamanho da fonte dos itens da lista */
+    color: #333; /* Cor do texto dos itens da lista */
+    margin: 1rem 0; /* Espaço entre os itens da lista */
+    padding-left: 20px; /* Espaço à esquerda para os itens da lista */
+    position: relative; /* Para permitir posicionamento de pseudo-elementos */
+}
+
+.book-teachings li::before {
+    content: '✔'; /* Marcador personalizado */
+    color: #4CAF50; /* Cor do marcador */
+    position: absolute; /* Posiciona o marcador */
+    left: 15rem; /* Alinha à esquerda */
+}
+
+.book-teachings p {
+    font-size: 1.1rem; /* Tamanho da fonte dos parágrafos */
+    color: #555; /* Cor do texto dos parágrafos */
+    margin: 1rem 0; /* Margem entre os parágrafos */
+}
+
+
+
+.form {
+    display: flex; /* Flexbox para alinhar o input e o botão */
+    justify-content: center; /* Centraliza o conteúdo do formulário */
+}
+
+.form input[type="email"] {
+    padding: 10px; /* Espaçamento interno do input */
+    border: 1px solid #ccc; /* Borda do input */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-right: 10px; /* Margem entre o input e o botão */
+}
+
+.about {
+    padding: 5rem 0; /* Espaçamento vertical */
+}
+
+h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    font-size: 2.5em; /* Tamanho da fonte do título */
+}
+
+.about-content {
+    display: flex; /* Usando Flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between; /* Espaço entre texto e imagem */
+}
+
+.about-text {
+    flex: 1; /* O texto ocupa o espaço restante */
+    margin-right: 20px; /* Margem à direita do texto */
+}
+
+.about-img {
+    width: 300px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+
+.footer {
+    color: #222; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 1rem 0; /* Espaçamento interno do rodapé */
+}
+
+.footer a {
+    color: #222; /* Cor do texto dos links no rodapé */
+    text-decoration: none; /* Remove sublinhado */
+}
